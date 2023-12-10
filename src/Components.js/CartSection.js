@@ -50,6 +50,7 @@ const CartSection = () => {
               </button>
             </div>
             <div className="card-body">
+            <div className="visually-hidden">{id}</div>
               <h5 className="card-title">{element.title}</h5>
               <p className="card-text">{element.description}</p>
             </div>

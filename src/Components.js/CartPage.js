@@ -77,10 +77,10 @@ const CartPage=()=>{
             ${product[id].price}
              <div className='box12'><button className='box14' onClick={()=>{
                                 setShow(!show)
-                                btnText=="ADD"? setBtnText("REMOVE"):setBtnText("ADD")
-                                btnText=="REMOVE"? setNum(0):setNum(0)
-                                btnText=="REMOVE"? setValue(0):setValue(0)
-                                btnText=="REMOVE"? setShip(0):setShip(0)
+                                btnText==="ADD"? setBtnText("REMOVE"):setBtnText("ADD")
+                                btnText==="REMOVE"? setNum(0):setNum(0)
+                                btnText==="REMOVE"? setValue(0):setValue(0)
+                                btnText==="REMOVE"? setShip(0):setShip(0)
 
                                 }}>{btnText}</button>
                                 </div>
