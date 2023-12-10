@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import CartSection from './Components.js/CartSection';
+import CartPage from './Components.js/CartPage';
+import { useState } from 'react';
+import ModeContext from './Components.js/utils/ModeContext';
+
 
 function App() {
+
+  const [id,setId]=useState('')
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ModeContext.Provider value={[id,setId]}>
+      <Routes>
+
+        <Route path='/' element={<CartSection/>}/>
+
+        <Route path='/cart' element={<CartPage/>}/>
+
+      </Routes>
+    </ModeContext.Provider>
   );
 }
 
